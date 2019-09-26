@@ -1,0 +1,26 @@
+[
+	{
+		"id": 6,
+		"firstName": "Tim",
+		"lastName": "Barton",
+		"email": "1@gmail.com",
+		"birthday": "12/20/1992",
+		"zipcode": "92883"
+	},
+	{
+		"id": 7,
+		"firstName": "Katelyn",
+		"lastName": "Suhr",
+		"email": "ksuhr@ucsc.edu",
+		"birthday": "12/27/1996",
+		"zipcode": "92860"
+	},
+	{
+		"id": 8,
+		"firstName": "Katy",
+		"lastName": "Perry",
+		"email": "ksuhr@ucsc.edu",
+		"birthday": "2/2/1992",
+		"zipcode": "92860"
+	}
+]
