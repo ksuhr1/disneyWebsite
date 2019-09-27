@@ -2,7 +2,58 @@ h1 {
   color: green;
 }
 
-body {
+html, body {
+  height:100%;
   text-align: center;
   margin: auto;
+}
+
+.container-fluid {
+  padding: 0px;
+  height:100vh;
+}
+
+.userInput, .userTable{
+  padding: 40px 20px;
+}
+
+
+.gridTop {
+  background-color: #90d5d540;
+}
+.gridBottom {
+  height: 100vh;
+  background-color: #041525;
+  /* background-color: #1f8686a6; */
+}
+
+.userlist {
+  color: #ffffff;
+}
+
+.table-dark {
+  background-color:#041525;
+}
+
+label {
+  float: left;
+}
+
+input[type="submit"] {
+    margin: 10px;
+    padding-right: 30px;
+}
+
+span {
+    position: relative;
+}
+
+span:after {
+    font-family: FontAwesome;
+    content: "\f004";
+    font-size: 13px;
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    pointer-events: none;
 }

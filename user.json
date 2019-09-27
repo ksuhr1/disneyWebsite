@@ -1,26 +1,18 @@
 [
 	{
-		"id": 6,
-		"firstName": "Tim",
-		"lastName": "Barton",
-		"email": "1@gmail.com",
+		"id": 1,
+		"firstName": "Minnie",
+		"lastName": "Mouse",
+		"email": "minnimouse@gmail.com",
 		"birthday": "12/20/1992",
-		"zipcode": "92883"
+		"zipcode": "92001"
 	},
 	{
-		"id": 7,
-		"firstName": "Katelyn",
-		"lastName": "Suhr",
-		"email": "ksuhr@ucsc.edu",
-		"birthday": "12/27/1996",
-		"zipcode": "92860"
-	},
-	{
-		"id": 8,
-		"firstName": "Katy",
-		"lastName": "Perry",
-		"email": "ksuhr@ucsc.edu",
-		"birthday": "2/2/1992",
-		"zipcode": "92860"
+		"id": 2,
+		"firstName": "Mickey",
+		"lastName": "Mouse",
+		"email": "mickeymouse7@gmail.com",
+		"birthday": "1/27/1928",
+		"zipcode": "92875"
 	}
 ]

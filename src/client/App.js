@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './app.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Table from 'react-bootstrap/Table'
+
+import Table from 'react-bootstrap/Table';
+import 'font-awesome/css/font-awesome.min.css';
+import Button from 'react-bootstrap/Button';
 
 
-export default class App extends Component{
+export default class App extends Component {
   constructor(props)
   {
     super(props);
@@ -15,7 +17,7 @@ export default class App extends Component{
       email:'',
       birthday:'',
       zipcode:'',
-      isToggleOn: 'none',
+      isToggleOn: 'sort',
       users:[],
       colFocus:'id',
     };
@@ -81,7 +83,7 @@ export default class App extends Component{
     const colMode = this.state.colFocus;
 
     this.setState((state) => {
-      if(currentMode == 'none')
+      if(currentMode == 'sort')
       {
         return{isToggleOn: 'up', colFocus: wantedCol};
       }
@@ -91,7 +93,7 @@ export default class App extends Component{
       }
       else if(currentMode == 'down')
       {
-        return{isToggleOn:'none', colFocus: wantedCol}
+        return{isToggleOn:'up', colFocus: wantedCol}
       }
     });
 
@@ -123,6 +125,7 @@ export default class App extends Component{
     console.log(this.state.isToggleOn)
     return (
       <div>
+      <div className="gridTop">
         <div className='userInput'>
           <h2> Create an Account </h2>
             <form onSubmit={this.handleSubmit}>
@@ -152,39 +155,48 @@ export default class App extends Component{
                 <label htmlFor="zipcodeInput"> Zipcode </label>
                 <input type="number" className="form-control" name='zipcode' value={this.state.zipcode} onChange={this.handleChange} />
               </div>
+              <span>
               <input type="submit" value="Submit"  />
+              </span>
             </form>
           </div>
+          </div>
+          <div className="gridBottom">
           <div className="userTable">
-            <h2> Current Users </h2>
-            <Table striped bordered hover>
+            <h2 class="userlist"> Current Users </h2>
+            <Table striped bordered hover responsive variant="dark">
               <thead>
                 <tr>
                   <th></th>
-                  <th>Id
-                    <button type="button" name="id" id="1" onClick={this.sortColumns}>
-                      {this.state.colFocus==="id" ? this.state.isToggleOn : "none"}
-                    </button>
-                  </th>
                   <th>First Name
-                    <button type="button" name="firstName" id="2" onClick={this.sortColumns}>
-                      {this.state.colFocus==="firstName" ? this.state.isToggleOn : "none"}</button>
+                  <div>
+                    <button type="button" name="firstName" id="1" onClick={this.sortColumns}>
+                      {this.state.colFocus==="firstName" ? this.state.isToggleOn : 'sort'}</button>
+                    </div>
                   </th>
                   <th>Last Name
-                    <button type="button" name="lastName" id="3" onClick={this.sortColumns}>
-                      {this.state.colFocus==="lastName" ? this.state.isToggleOn : "none"}</button>
+                  <div>
+                    <button type="button" name="lastName" id="2" onClick={this.sortColumns}>
+                      {this.state.colFocus==="lastName" ? this.state.isToggleOn : 'sort'}</button>
+                  </div>
                   </th>
                   <th>Email
-                    <button type="button" name="email" id="4" onClick={this.sortColumns}>
-                      {this.state.colFocus==="email" ? this.state.isToggleOn : "none"}</button>
+                  <div>
+                    <button type="button" name="email" id="3" onClick={this.sortColumns}>
+                      {this.state.colFocus==="email" ? this.state.isToggleOn : 'sort'}</button>
+                  </div>
                   </th>
                     <th>Birthday
-                      <button type="button" name="birthday" id="5" onClick={this.sortColumns}>
-                        {this.state.colFocus==="birthday" ? this.state.isToggleOn : "none"}</button>
+                      <div>
+                      <button type="button" name="birthday" id="4" onClick={this.sortColumns}>
+                        {this.state.colFocus==="birthday" ? this.state.isToggleOn : 'sort'}</button>
+                      </div>
                     </th>
                   <th>Zipcode
-                    <button type="button" name="zipcode" id="6" onClick={this.sortColumns}>
-                      {this.state.colFocus==="zipcode" ? this.state.isToggleOn : "none"}</button>
+                    <div>
+                    <button type="button" name="zipcode" id="5" onClick={this.sortColumns}>
+                      {this.state.colFocus==="zipcode" ? this.state.isToggleOn : 'sort'}</button>
+                    </div>
                   </th>
                 </tr>
               </thead>
@@ -194,7 +206,6 @@ export default class App extends Component{
                   <td>
                     <button type="button" onClick={() => this.deleteUser(user.id)}>Delete</button>
                   </td>
-                  <td>{user.id}</td>
                   <td >{user.firstName}</td>
                   <td>{user.lastName}</td>
                   <td >{user.email}</td>
@@ -204,6 +215,7 @@ export default class App extends Component{
                 )}
               </tbody>
             </Table>
+            </div>
           </div>
         </div>
     );
