@@ -38,22 +38,3 @@ html, body {
 label {
   float: left;
 }
-
-input[type="submit"] {
-    margin: 10px;
-    padding-right: 30px;
-}
-
-span {
-    position: relative;
-}
-
-span:after {
-    font-family: FontAwesome;
-    content: "\f004";
-    font-size: 13px;
-    position: absolute;
-    right: 20px;
-    top: 1px;
-    pointer-events: none;
-}

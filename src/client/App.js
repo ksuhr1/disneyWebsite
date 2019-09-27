@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './app.css';
-
 import Table from 'react-bootstrap/Table';
-import 'font-awesome/css/font-awesome.min.css';
 import Button from 'react-bootstrap/Button';
 
 
@@ -155,9 +153,7 @@ export default class App extends Component {
                 <label htmlFor="zipcodeInput"> Zipcode </label>
                 <input type="number" className="form-control" name='zipcode' value={this.state.zipcode} onChange={this.handleChange} />
               </div>
-              <span>
               <input type="submit" value="Submit"  />
-              </span>
             </form>
           </div>
           </div>
